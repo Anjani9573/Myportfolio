@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Integrating AI in Web Apps - Software Developer Portfolio">
+    <title>Integrating AI in Web Apps | Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .blog-post {
+            max-width: 800px;
+            margin: 120px auto 60px;
+            padding: 2rem;
+            background: rgba(17, 17, 22, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid var(--border-subtle);
+        }
+        .blog-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 2rem;
+        }
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #a0a0b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date {
+            color: var(--neon-accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+        .blog-content h2 {
+            margin: 2rem 0 1rem;
+            color: var(--text-main);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--neon-secondary);
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
+            color: var(--neon-accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="nav-logo">DevPort</a>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#blog" class="active">Blog</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article class="blog-post">
+            <a href="index.html#blog" class="back-link">&larr; Back to Portfolio</a>
+            <header class="blog-header">
+                <span class="date">September 20, 2026</span>
+                <h1>Integrating AI in Web Apps</h1>
+            </header>
+            <div class="blog-content">
+                <p>The rise of powerful LLMs and accessible machine learning APIs has completely shifted the paradigm of web application development. We can now integrate reasoning engines directly into traditional SaaS platforms, fundamentally transforming the user experience.</p>
+                
+                <h2>1. Augmenting User Workflows</h2>
+                <p>Instead of forcing users to navigate complex forms and dashboards, we can overlay AI assistants capable of interpreting natural language intent. This means users can simply type "Generate a Q3 earnings report" instead of clicking through five different menus to configure a query.</p>
+                
+                <h2>2. Handling the Asynchronous Nature of AI</h2>
+                <p>AI models can be slow. When building web interfaces, relying on standard HTTP request/response loops for generation can lead to timeout errors and poor UX. Implementing WebSockets or Server-Sent Events (SSE) allows platforms to stream tokens to the frontend in real-time, giving the user immediate visual feedback that work is being done.</p>
+                
+                <h2>3. Structuring AI Outputs</h2>
+                <p>For programmatic integration, relying on pure text generation is risky. Ensure that you instruct the LLM to output highly structured JSON using strict schemas. Alternatively, utilize specific function-calling APIs (like OpenAI's tool calling) to ensure the AI's response can be deterministically parsed and executed by your application logic.</p>
+
+                <p>The era of static data entry applications is ending. Web applications are becoming automated agents, and standardizing how we communicate with AI models is the key engineering challenge of the decade.</p>
+            </div>
+        </article>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

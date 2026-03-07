@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Personal Portfolio of a Software Developer">
+    <title>Software Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Animated Cyberpunk Background -->
+    <div class="cyber-grid"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-logo">Anjani’s Digital Lab</div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2 class="greeting">Hello, I'm <span class="highlight">Anjani Kumar Padma</span></h2>
+                <h1 class="title">Software Developer</h1>
+                <p class="subtitle">Building scalable applications with AI integration and modern cloud platforms.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn btn-outline">View Projects</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="glow-circle"></div>
+                <img src="assets/profile-placeholder.jpg" alt="Developer Profile" class="hero-img" id="profile-img">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>Passionate software developer and Salesforce engineer focused on building scalable and efficient
+                        applications. Interested in AI-driven solutions, system design, and solving complex problems
+                        using modern technologies.
+                    </p>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>10+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>5</h3>
+                        <p>Certifications</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>1.5</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>10+</h3>
+                        <p>Technologies Used</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">Developing scalable systems, efficient solutions, and seamless integrations.</p>
+            <div class="skills-grid">
+                <div class="skill-badge">HTML5</div>
+                <div class="skill-badge">CSS3</div>
+                <div class="skill-badge">JavaScript</div>
+                <div class="skill-badge">Node.js</div>
+                <div class="skill-badge">Git</div>
+                <div class="skill-badge">Salesforce</div>
+                <div class="skill-badge">Apex</div>
+                <div class="skill-badge">LWC</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-stack e-commerce solution with dynamic product management and secure checkout.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span><span>JavaScript</span><span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-small">GitHub</a>
+                            <a href="#" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>CRM Integration System</h3>
+                        <p>A custom Salesforce integration that synchronizes customer data across multiple platforms in
+                            real-time.</p>
+                        <div class="project-tech">
+                            <span>Salesforce</span><span>Apex</span><span>API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-small">GitHub</a>
+                            <a href="#" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Task Automation Bot</h3>
+                        <p>An AI-powered bot automating repetitive workflows to save hours of manual entry.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span><span>Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-small">GitHub</a>
+                            <a href="#" class="btn-small btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <h2 class="section-title">Recent Articles</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <p class="blog-category">Salesforce Development</p>
+                    <h3>Best Practices for LWC Components</h3>
+                    <p>Learn how to optimize Lightning Web Components for maximum performance and reusability.</p>
+                    <a href="blog-lwc.html" class="read-more">Read More &rarr;</a>
+                </article>
+                <article class="blog-card">
+                    <p class="blog-category">System Design</p>
+                    <h3>Designing Scalable APIs</h3>
+                    <p>A deep dive into RESTful principles and how to structure APIs that scale to millions of users.
+                    </p>
+                    <a href="blog-api.html" class="read-more">Read More &rarr;</a>
+                </article>
+                <article class="blog-card">
+                    <p class="blog-category">AI and Automation</p>
+                    <h3>Integrating AI in Web Apps</h3>
+                    <p>Practical steps to enrich your applications with modern machine learning models and APIs.</p>
+                    <a href="blog-ai.html" class="read-more">Read More &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's build something amazing together.</h3>
+                    <p>Feel free to reach out for collaborations, opportunities, or just to say hi!</p>
+                    <div class="contact-links">
+                        <a href="mailto:hello@example.com" class="contact-link">📧 padmaanjan957@gmail.com</a>
+                        <a href="#" class="contact-link">🔗 LinkedIn</a>
+                        <a href="#" class="contact-link">🐙 GitHub</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="input-group">
+                        <input type="text" id="name" required placeholder="Your Name">
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder="Your Email">
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Anjani's Digital lab. Built with futuristic design in mind.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

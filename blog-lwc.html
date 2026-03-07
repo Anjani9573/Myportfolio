@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best Practices for LWC Components - Software Developer Portfolio">
+    <title>Best Practices for LWC Components | Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .blog-post {
+            max-width: 800px;
+            margin: 120px auto 60px;
+            padding: 2rem;
+            background: rgba(17, 17, 22, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid var(--border-subtle);
+        }
+        .blog-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 2rem;
+        }
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #a0a0b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date {
+            color: var(--neon-accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+        .blog-content h2 {
+            margin: 2rem 0 1rem;
+            color: var(--text-main);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--neon-secondary);
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
+            color: var(--neon-accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="nav-logo">DevPort</a>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#blog" class="active">Blog</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article class="blog-post">
+            <a href="index.html#blog" class="back-link">&larr; Back to Portfolio</a>
+            <header class="blog-header">
+                <span class="date">October 15, 2026</span>
+                <h1>Best Practices for LWC Components</h1>
+            </header>
+            <div class="blog-content">
+                <p>Lightning Web Components (LWC) represent the modern standard for developing intuitive interfaces on the Salesforce platform. Unlike older frameworks, LWC leverages standard web technologies like Web Components, DOM rendering, and modern JavaScript, making them incredibly fast and lightweight.</p>
+                
+                <h2>1. Utilize Lightning Data Service (LDS)</h2>
+                <p>Before writing custom Apex controllers, always consider Lightning Data Service. The wire service (`@wire`) allows you to seamlessly read and cache data from Salesforce without writing server-side code. This not only reduces boilerplate but ensures that data reacts dynamically to state changes.</p>
+                
+                <h2>2. Optimize Component Reusability</h2>
+                <p>Deconstruct complex monolithic components into smaller, more focused reusable chunks. Use the parent-child communication mechanisms effectively—pass data down through `@api` properties and alert parents of changes via custom events. This decoupled approach drastically eases maintenance.</p>
+                
+                <h2>3. Manage State Efficiently</h2>
+                <p>Be mindful of reactivity. In LWC, fields are reactive by default when their value changes. However, when mutating complex objects or arrays, you may need to assign a new copy for the framework to pick up the change. Using standard JS array methods like `map` or the spread operator (`...`) is highly recommended to ensure components update cleanly.</p>
+
+                <p>By keeping performance and architectural boundaries in mind, LWC allows us to build powerful, enterprise-grade applications quickly. Focus on standard web practices and use Apex only when strictly necessary!</p>
+            </div>
+        </article>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

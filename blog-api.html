@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Designing Scalable APIs - Software Developer Portfolio">
+    <title>Designing Scalable APIs | Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .blog-post {
+            max-width: 800px;
+            margin: 120px auto 60px;
+            padding: 2rem;
+            background: rgba(17, 17, 22, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid var(--border-subtle);
+        }
+        .blog-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 2rem;
+        }
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #a0a0b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date {
+            color: var(--neon-accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+        .blog-content h2 {
+            margin: 2rem 0 1rem;
+            color: var(--text-main);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--neon-secondary);
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
+            color: var(--neon-accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="nav-logo">DevPort</a>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#blog" class="active">Blog</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article class="blog-post">
+            <a href="index.html#blog" class="back-link">&larr; Back to Portfolio</a>
+            <header class="blog-header">
+                <span class="date">October 01, 2026</span>
+                <h1>Designing Scalable APIs</h1>
+            </header>
+            <div class="blog-content">
+                <p>As applications grow from thousands to millions of users, the backbone that connects the client to the server—the API—must be designed to scale gracefully. A poorly designed API can become a significant bottleneck.</p>
+                
+                <h2>1. Stateless over Stateful</h2>
+                <p>RESTful APIs should be truly stateless. The server should not hold any client context between requests. Every request from the client must contain all the information necessary for the server to understand and process it. This allows requests to be load-balanced easily across any available server node without session dependency.</p>
+                
+                <h2>2. Effective Caching Strategies</h2>
+                <p>Not computing the same answers over and over again is the simplest path to scale. Utilize standard HTTP caching headers like ETag and Cache-Control so clients can cache responses. Behind the API gateway, consider in-memory caching solutions like Redis to prevent expensive repetitive database queries.</p>
+                
+                <h2>3. Rate Limiting and Throttling</h2>
+                <p>Protecting your infrastructure from abusive usage is vital. Implement robust rate ceilings based on client IP or API keys. Throttling ensures that a sudden spike in traffic from automated bots or viral events doesn't saturate your database connections and crash the entire system.</p>
+
+                <p>Designing high-scale APIs is as much about protecting the underlying systems as it is about facilitating data transfer. Keep it stateless, cache aggressively, and always protect your endpoints!</p>
+            </div>
+        </article>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
